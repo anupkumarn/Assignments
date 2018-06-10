@@ -52,17 +52,17 @@ def multiply_func(fn_arr, fn_matr):
 D = multiply_func(X,A)
 print('Product of vector X and matrix A is: ',D)
 #print(type(D))
-#print(D.shape)
+print(D.shape)
 
 # Create a complex number with non-zero real and absolute values
-Z = np.random.rand(1,2).view(dtype=np.complex128)
+Z = complex(np.random.rand(), np.random.rand())
 print('Complex number generated is: ',Z)
 
 # Show complex number Z' real, imgainary and absolute values
 print('Real part is ', Z.real, ', Imaginary part is ', Z.imag, ' and Absolute value is ', abs(Z))
 
 # Multiply D with absolute of Z and assign to C
-C = D.T * abs(Z)
+C = D * abs(Z)
 print('Product of matrix D with absolute of complex number Z is: ')
 print(C)
 
